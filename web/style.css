@@ -1,0 +1,86 @@
+body {
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  text-align: center;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  color: #fff;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+  transition: background 0.2s, color 0.2s;
+}
+.cell.x {
+  color: #39ff14;
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+.cell.o {
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+.turn-label {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0ff;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #222;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #0ff;
+  text-align: center;
+}
+button {
+  background: #0ff;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+button:hover {
+  background: #39ff14;
+  color: #000;
+}
